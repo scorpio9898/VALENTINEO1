@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #e99ab3;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+            color: #800020;
+        }
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+        .heart {
+            position: absolute;
+            bottom: -10vh;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 40%, 75% 100%, 50% 75%, 25% 100%, 0% 40%);
+            animation: float 5s infinite ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day my SweetE pie MEGHU!❤</h1>
+        <p>You are the  beat OF MY HEART . 💕💓💓
+        </p>YOU ARE THE SOAL OF MY BODY.💕💓💓
+    </P> IF I AM LOVE YOU THE LANGUAGE THAT I SPEAK .💕💓💓
+</p> any time you compliment me meghu it makes me feel special .💕💓💓
+</P> THANKU MAGHU FOR BEING MY Valentine THIS YOUR "I REALLY LOVE YOU BOLTAI CHAI AMI TOKE ".💕💓💓
+</P> WOULD LIKE TO END WITH A LINE "Not Only this year i want you to be my Valentine for the rest of my life .💕💓💓"
+    </div>
+    <div class="hearts"></div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            document.querySelector('.hearts').appendChild(heart);
+            
+            const size = Math.random() * 20 + 10 + 'px';
+            heart.style.width = size;
+            heart.style.height = size;
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
